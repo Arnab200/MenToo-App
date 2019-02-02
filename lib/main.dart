@@ -14,21 +14,45 @@ class MyApp extends StatelessWidget {
       title: "MenToo",
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          actions: <Widget>[new IconButton(icon: new Icon(Icons.search), onPressed: (){},)],
-            title: new Row(
-              children: <Widget>[
-                new IconButton(icon: new Icon(Icons.menu), onPressed: (){},),
-                Text('MenToo')
-              ],
-            ),
-            backgroundColor: Colors.black.withOpacity(0.85) ),
+        
         body: new Stack(
           children: <Widget>[
-            TheGridView().build(),
+            Container(
+              decoration: new BoxDecoration(
+                image: DecorationImage(
+                  image: new AssetImage("assets/images/sunrise.jpg"),
+                  fit: BoxFit.cover
+                )
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.only(top: 70.0),
+              
+              child:TheGridView().build(context)),// actual gridview goes here
+            
+            new Positioned(
+              top: 0.0,
+              left: 0.0,
+              right: 0.0,
+              child: AppBar(
+                actions: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(right: 20.0),
+                    child:Icon(Icons.search)),
+
+                ],
+                leading: Icon(Icons.menu),
+                title: Text("MenToo"),
+                
+                backgroundColor: Colors.transparent,
+                elevation: 0.0,
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+
