@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './notalonepage.dart';
 
 import './newdashboard.dart';
 
@@ -13,6 +14,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "MenToo",
       debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/someOtherRoute': (context) => notAlonePage(),
+      },
       home: Scaffold(
         
         body: new Stack(
@@ -27,8 +32,8 @@ class MyApp extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.only(top: 70.0),
-              
-              child:TheGridView().build(context)),// actual gridview goes here
+
+              child:TheGridView().build(context)), // actual gridview goes here
             
             new Positioned(
               top: 0.0,

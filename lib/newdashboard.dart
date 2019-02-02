@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import './main.dart';
 
 import './notalonepage.dart';
 
 class TheGridView{
-
 
   Card makeGridCell(String name, IconData icon){
     return Card(
@@ -23,20 +23,6 @@ class TheGridView{
     );
   }
 
-  // _youarenotalone(){
-  //   final notalonePage =  new MaterialPageRoute(builder: (context){
-  //     return new Scaffold(
-  //       appBar: AppBar(
-  //         title: new Text("You Are Not Alone"),
-  //       ),
-  //       body: new Text("You are currently inside the 'You Are Not Alone Page' where you can chat with others who are victims and share experience."),
-  //     );
-  //   });
-  //   Navigator.push(context, notalonePage);
-  // }
-
-
-
   GridView build(context){
     return GridView.count(
       primary: true,
@@ -48,10 +34,15 @@ class TheGridView{
       children: <Widget>[
         GestureDetector(
           onTap: (){
-            Route notalonePage = MaterialPageRoute(builder: (context) => notAlonePage());
-            Navigator.push(context, notalonePage);  
+             Route notalonePage = MaterialPageRoute(builder: (context) => notAlonePage());
+            Navigator.push(context, notalonePage);
           },
           child: makeGridCell("You are not alone", Icons.chat)),
+          
+          
+          
+          
+          
           GestureDetector(
           onTap: (){
             print("You tapped on Counselling");
