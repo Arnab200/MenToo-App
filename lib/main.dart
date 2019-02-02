@@ -25,15 +25,6 @@ class MyApp extends StatelessWidget {
             backgroundColor: Colors.black.withOpacity(0.85) ),
         body: new Stack(
           children: <Widget>[
-            new Container(
-              decoration: new BoxDecoration(
-                  image: new DecorationImage(
-                      colorFilter: new ColorFilter.mode(
-                          Colors.black.withOpacity(0.85), BlendMode.dstATop),
-                      image: new AssetImage(
-                          "assets/images/MenToo_app_picture.jpg"),
-                      fit: BoxFit.cover)),
-            ),
             TheGridView().build(),
           ],
         ),
