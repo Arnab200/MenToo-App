@@ -37,7 +37,7 @@ class TheGridView{
              Route notalonePage = MaterialPageRoute(builder: (context) => notAlonePage());
             Navigator.push(context, notalonePage);
           },
-          child: makeGridCell("You are not alone", Icons.chat)),
+          child: makeGridCell("You Are Not Alone", Icons.chat)),
           
           
           
